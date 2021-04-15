@@ -10,7 +10,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["nodejs", "fs", "json", "api", "local"],
+  "keywords": [
+    "nodejs",
+    "fs",
+    "json",
+    "api",
+    "local"
+  ],
   "author": "samuel osinloye",
   "license": "ISC"
 }

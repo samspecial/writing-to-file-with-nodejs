@@ -1,6 +1,6 @@
 
-import fetch from "node-fetch";
-import { writeFile } from "fs";
+const fetch = require("node-fetch");
+const fs = require("fs");
 
 let url = "http://jsonplaceholder.typicode.com/posts", settings = { method: "GET" };
 
@@ -10,7 +10,7 @@ const getPosts = async () => {
         const response = await fetch(url, settings);
         const result = await response.json();
         // Writing to posts.json file present in result folder
-        writeFile("./result/posts.json", JSON.stringify(result, null, 2), err => {
+        fs.writeFile("./result/posts.json", JSON.stringify(result, null, 2), err => {
             // Check file writing operation status
             if (err) throw err;
             // Log status of wiriting operation to console
